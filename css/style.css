@@ -44,7 +44,7 @@
     box-shadow: 0 0 20px 0 #fbbd61;
     transition: all .25s ease-in-out;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
 }
 
@@ -52,10 +52,23 @@
     width: 100%;
 }
 
+.navbar-toggler .icon-bar{
+    background:#fbbd61;
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.navbar-toggler .icon-bar:nth-child(2) {
+    margin: 4px 0;
+}
+ 
 /* slider css */
 
 .carousel-item {
-    background: url(/images/hero-1.jpg) no-repeat center center;
+    background-repeat: no-repeat;
+    background-position: center center
     background-size: cover;
     height: 48rem;
 }
@@ -76,7 +89,6 @@
     bottom: initial;
     left:50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
 }
 
 .slider .carousel-caption p {
@@ -107,8 +119,8 @@
     border: 0.125rem solid #FFFFFF;
 }
 
-.slider .carousel-indicators li.active {
-    background: #FFFFFF;
+.slider .carousel-indicators .active {
+    background-color: #FFFFFF;
 }
 
 .slider .carousel-item::after {
@@ -180,7 +192,7 @@
     background: linear-gradient(to right,#fbbd61,#ec7532);
     box-shadow: 0 0 20px 0 #fbbd61;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
 }
 
@@ -329,8 +341,9 @@
 .showtimes .nav-tabs .nav-item.show .nav-link, 
 .showtimes .nav-tabs .nav-link.active , 
 .showtimes .nav-tabs .nav-link:hover {
-    border: none;
+    border: #FFFFFF;
     background-color: #FFFFFF;
+    outline: none;
 }
 
 img.showtimes__img {
@@ -435,6 +448,12 @@ img.showtimes__img {
 
 .showtimes .tab-content {
     padding: 2.8rem 0;
+}
+
+.view__times {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 /* END SHOWTIMES CSS */
