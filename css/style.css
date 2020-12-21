@@ -42,7 +42,7 @@
     height: 0.125rem;
     background: linear-gradient(to right,#fbbd61,#ec7532);
     box-shadow: 0 0 20px 0 #fbbd61;
-    transition: all .25s ease-in-out;
+    transition: width .25s;
     position: absolute;
     bottom: -1px;
     left: 0;
@@ -52,25 +52,37 @@
     width: 100%;
 }
 
-.navbar-toggler .icon-bar{
-    background:#fbbd61;
+.navbar-toggler:focus {
+    outline: 0;
+    border: none !important;
+    box-shadow: none; 
+}
+
+.navbar-toggler {
+    margin-top: 1rem;
+    border-color: transparent !important;
+}
+
+.navbar-toggler .icon-bar {
+    background-color: #fbbd61;
     display: block;
     width: 22px;
     height: 2px;
     border-radius: 1px;
 }
 
-.navbar-toggler .icon-bar:nth-child(2) {
-    margin: 4px 0;
+.navbar-toggler .icon-bar+.icon-bar {
+    margin-top: 4px;
 }
+
  
 /* slider css */
 
 .carousel-item {
-    background-repeat: no-repeat;
-    background-position: center center
-    background-size: cover;
-    height: 48rem;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    min-height: 48rem;
 }
 
 .slider .carousel-caption > span{
@@ -460,6 +472,37 @@ img.showtimes__img {
 
 /* REPONSIVE CSS */
 
+@media (max-width: 991px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .navbar-collapse .navbar-nav{
+        position: static;
+        margin: 0!important;
+        background: rgba(0,0,0,.9);
+    }
+
+    .header .nav-link.active::after {
+        width: 0;
+    }
+
+    .header .nav-link:hover::after {
+        width: 100%;
+    }
+
+    .header .nav-link.active {
+        color: #ec7532 !important;
+    }
+
+    .container .navbar-collapse {
+        margin-top: 1rem;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+} 
+
 @media (max-width: 767px) {
     img.showtimes__img {
         margin-bottom: 1.5rem;
@@ -472,26 +515,28 @@ img.showtimes__img {
     .showtimes .showtimes_length {
         text-align: left;
     }
+
+
 }
 
-@media screen and (max-width:600px) {
-
+@media screen and (max-width:576px) {
+    
     html {
         font-size: 15px;
-    }
-
-    .title {
-        font-size: 3px ;
     }
 
     img.showtimes__img {
         width: 100%;
     }
 
-    
-}
+    .slider .carousel-caption h1 {
+        font-size: 2.8rem;
+    }
 
-@media screen and (max-width:576px) {
+    .slider .carousel-caption  {
+        padding: 0 2rem;
+    }
+
     .showtimes .nav-tabs .nav-link::after
     {
         content: '';
