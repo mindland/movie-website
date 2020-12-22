@@ -10,6 +10,10 @@
     background: #ec7532;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 /* END GLOBAL CSS */
 
 
@@ -243,8 +247,9 @@
     margin-bottom: 0.2rem;
 }
 
-.new .rating i {
+.new .star__rating {
     color: #fbbd61;
+    text-align: center;
 }
 
 .new .movie-slide .img::before {
@@ -272,13 +277,13 @@
     top: 30%;
 
     border-radius: 0 !important;
-    margin: 0 -3rem !important;
+    margin: 0 -2.5rem !important;
     transition: all 0.3s ease-in-out;
 }
 
-.new  .owl-theme .owl-nav button:hover {
+.new .owl-theme .owl-nav button:hover {
     background-color: Transparent;
-    margin: 0 -2.7rem !important;
+    margin: 0 -2.2rem !important;
 }
 
 .new .owl-theme .owl-nav button span{
@@ -468,14 +473,101 @@ img.showtimes__img {
     flex-wrap: wrap;
 }
 
-/* END SHOWTIMES CSS */
+
+/* CONTACT CSS */
+.contact {
+    margin: 3rem 0;
+}
+
+.contact p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 0.625rem;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #4a4a4a;
+    margin-bottom: 1.25rem;
+}
+
+.gradient__text {
+    background: linear-gradient(330deg,#fbbd61 0%,#ec7532 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact p.gradient__text {
+    font-size: 2.875rem;
+    font-weight: 400;
+}
+
+/* FOOTER CSS */
+.footer {
+    background: #000000;
+    color: #FFFFFF;
+    padding-top: 4rem;
+}
+
+.footer * {
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.footer h6 {
+    text-transform: uppercase;
+    color: #ec7532;
+    letter-spacing: 0.125rem;
+    margin: 0;
+    padding-bottom: 1.25rem;
+    font-size: 1rem;
+}
+
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer ul li a, .footer ul li a:active, .footer ul li a:visited {
+    display: inline-block;
+    padding: 3px 0;
+    letter-spacing: 1.5px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.footer li a i {
+    color: rgba(255,255,255,.3);
+    width: 1.5rem;
+    transition: all 300ms ease-in-out;
+}
+
+.footer ul li a:hover, .footer ul li a:hover i {
+    color: #fbbd61;
+}
+
+.footer .copyright {
+    margin-top: 3rem;
+    padding: 1.125rem 0;
+    border-top: 2px solid rgba(255,255,255,.1);
+}
+
+.footer .copyright p a {
+    color: #FFFFFF;
+    transition: all 0.5s ease-in-out;
+}
+.footer .copyright p a:hover {
+    color: #ec7532;
+}
+
+
 
 /* REPONSIVE CSS */
 
 @media (max-width: 991px) {
-    .container {
-        max-width: 960px;
-    }
+
 
     .navbar-collapse .navbar-nav{
         position: static;
@@ -513,6 +605,10 @@ img.showtimes__img {
         text-align: left;
     }
 
+    .footer h6 {
+        margin-top: 1.5rem;
+    }
+
 } 
 
 @media (max-width: 767px) {
@@ -523,6 +619,15 @@ img.showtimes__img {
     .showtimes__list button{
         margin-bottom: 0.3rem;
     }
+
+    .new .owl-theme .owl-nav button {
+        margin: 0 -2rem !important;
+    }
+
+    .new .owl-theme .owl-nav button:hover {
+        margin: 0 -1.7rem !important;
+    }
+    
     
 }
 
@@ -555,6 +660,10 @@ img.showtimes__img {
     {
         width: 0.25rem;
         height: 100%;
+    }
+
+    .owl-theme .owl-nav {
+        display: none;
     }
 
 }
