@@ -3,6 +3,7 @@
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     letter-spacing: 1px;
+    font-weight: 400;
 }
 
 ::selection {
@@ -12,6 +13,11 @@
 
 a {
     text-decoration: none !important;
+    color: #FFFFFF;
+}
+
+a:hover {
+    color: #FFFFFF;
 }
 
 /* END GLOBAL CSS */
@@ -212,6 +218,10 @@ a {
     left: 0;
 }
 
+.new .movie-slide {
+    text-align: center;
+}
+
 .new .movie-slide .img {
     border-radius: 0.75rem;
 }
@@ -250,6 +260,7 @@ a {
 .new .star__rating {
     color: #fbbd61;
     text-align: center;
+    display: inline-block;
 }
 
 .new .movie-slide .img::before {
@@ -473,6 +484,222 @@ img.showtimes__img {
     flex-wrap: wrap;
 }
 
+/* COMING CSS */
+
+/* slider for css */
+
+.slick-slide {
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.dark {
+    background-color: #101010;
+    z-index: 0;
+}
+
+.coming {
+    position: relative;
+}
+
+.slider-for {
+    width: 100%;
+}
+
+.slider-for .bg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.head__coming {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 3rem;
+}   
+
+.head__coming h2 {
+    color: #FFFFFF; 
+    font-size: 1.125rem;
+    font-weight: 400;
+    padding-bottom: 1.125rem;
+    position: relative;
+}
+
+.head__coming h2::after {
+    position: absolute;
+    right: auto;
+    bottom: -1px;
+    display: block;
+    width: 8rem;
+    height: 0.25rem;
+    content: '';
+    background: linear-gradient(to right,#fbbd61,#ec7532);
+}
+
+.coming .slider-for .row {
+    padding: 8rem 0 2.5rem;
+}
+
+.coming .slide__content span {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.125rem;
+    color: #ec7532;
+}
+
+.coming .slide__video {
+    display: flex;
+    align-items: center;
+}
+
+.coming .slide__video a {
+    position: relative;
+    display: block;
+    box-shadow: 0 0 50px 15px rgba(0,0,0,.75);
+    cursor: pointer;
+    outline: none;
+}
+
+.coming .slide__video i {
+    font-size: 2rem;
+    line-height: 75px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    text-indent: 0.5rem;
+    color: #FFFFFF;
+    border: 2px solid #ec7532;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.coming .slide__video a:hover i {
+    transform: scale(0.9);
+}
+
+.coming .slide__video img {
+    max-width: 100%;
+    height: auto;
+}
+
+.coming .star__rating i , .coming p i {
+    color: #ec7532;
+}
+
+
+.coming .slide__content h3 {
+    font-size: 2.125rem;
+    line-height: 1.4em;
+    font-weight: 300;
+    margin: 0;
+}
+
+.star__rating , .date {
+    display: inline-block;
+    width: auto;
+}
+
+.date {
+    opacity: 0.75;
+    font-size: 0.875rem;
+}
+
+.slider-nav {
+	width: 100%;
+    display: block;
+    padding-top: 3.4rem;
+    padding-bottom: 3.5rem;
+}
+
+.slider-nav .slick-slide {
+    width: 100%;
+    text-align: center;
+    outline: none;  
+    margin: 0 10px;
+    opacity: 0.35;
+    transition: all 400ms ease;
+    cursor: pointer;
+}
+
+.slider-nav .slick-slide:hover, .slider-nav .slick-slide.slick-current {
+    opacity: 1 ;
+}
+
+.slider-nav .slick-slide img{
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0.625rem !important;
+    display: block;
+}
+
+.slider-nav .info h5 {
+    font-size: 0.875em;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.slider-nav .info .release__date {
+    font-size: 0.875rem;
+    opacity: 0.5;
+    color: #fff;
+}
+
+.slick-arrow {
+	position: absolute;
+    top: 40%;
+    z-index: 10;
+    color: #ec7532;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.slick-arrow.fa-angle-left {
+    left:-1.5rem;
+}
+
+.slick-arrow.fa-angle-right {
+	right:-1.5rem;
+}
+
+.slick-arrow.fa-angle-left:hover {
+    opacity: 0.6;
+    left: -1.3rem;
+}
+
+.slick-arrow.fa-angle-right:hover {
+    opacity: 0.6;
+    right: -1.3rem;
+}
+
 
 /* CONTACT CSS */
 .contact {
@@ -666,5 +893,8 @@ img.showtimes__img {
         display: none;
     }
 
-}
+    .coming .slick-arrow {
+        display: none !important;
+    }
 
+}
